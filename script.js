@@ -16,6 +16,8 @@ $(function() {
         $('.navbar-collapse').collapse('hide');
         let obj = document.getElementById(id);
 
+        // For mobile devices, scroll to end of element.
+        // For larger devices, scroll to center of element.
         let end = {
             behavior: "smooth",
             block: "end",
@@ -28,8 +30,6 @@ $(function() {
             inline: "center",
         }
 
-        // For mobile devices, scroll to end of card
-        // For larger devices, scroll to center of card
         if ($(window).width() < 768) {
             obj.scrollIntoView(end)
         }
