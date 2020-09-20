@@ -1,0 +1,110 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("images/moroccan-flower.png");
+}
+
+/* Navigation Bar */
+#navbar {
+    border-bottom: 1px solid #006600;
+    background-color: #fafafa;
+}
+
+#navbar a:hover {
+    font-weight: bolder;
+}
+
+#covidNav {
+    text-decoration: underline;
+}
+
+#fbIcon {
+    width: 30px;
+}
+
+/* Carousel */
+.carousel-caption {
+    border: 1px solid white;
+    background-color: rgba(0,102,0, 0.65);
+    color: #fafafa;
+    height: 6rem;
+}
+
+.carousel-caption h5 {
+    font-size: 1rem;
+}
+
+/* Cards */
+.card {
+    margin: 1rem;
+    text-align: center;
+}
+
+.card a{
+    color: #006600;
+}
+
+.card-header {
+    background-color: #fafafa !important;
+}
+
+.card-body a{
+    font-size: 1rem;
+}
+
+.card-header h5 {
+    font-size: 1rem;
+}
+
+.card-header h5, .navbar a{
+    color: #006600 !important;
+} 
+
+.card-header .btn-link:hover {
+    background-color:rgba(0,102,0) !important;
+    text-decoration: none;
+}
+
+/* If card header is hovered, applies css to h5 element inside it */
+.card-header .btn-link:hover > h5{ 
+    color: white !important;
+}
+
+/* Facebook Plugin */
+.fb-page {
+    text-align: center;
+}
+
+.footer-copyright {
+    background-color: #006600;
+    color: white;
+    opacity: 80%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
