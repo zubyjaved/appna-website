@@ -2,12 +2,11 @@
 $(function() {
     /*
     Kinda spaghetti..
-    If the user clicks on nav link that opens a card, scroll the card into view.
+    If the user clicks on nav link that opens a card, scrolls the card into view.
 
-    1. Gets id of nav-link, removes "nav" from end of id.
-    2. Adds "Btn" to id and scrolls to new id.
-    Example : contactNav -> contactBtn 
-    
+    1. Remove "nav" from clicked nav-link id.      Example: contactNav -> contact
+    2. Adds "Btn" to id.                           Example: contact -> contactBtn
+    3. Searches for #contactBtn and scrolls to it.    
     */
     $('.accord-link').click(function() {
         let id = $(this).attr('id');
@@ -38,6 +37,7 @@ $(function() {
         }
     });  
 
+    /* If email in card-body is clicked, copy to clipboard */
     $('#email').click(function() { 
         let textarea = document.createElement('textarea');
         textarea.textContent = $(this).text();
@@ -45,5 +45,14 @@ $(function() {
         textarea.select();
         document.execCommand('copy');
         textarea.remove();
+
+        $('#contactInfo').hide();
+        let $contact = $("<p>Copied!</p>");
+        $ ('#contactInfo').after($contact);
+        setTimeout(function() {
+            $contact.hide();
+            $('#contactInfo').show();
+        }, 3000);
+
     });
 });
