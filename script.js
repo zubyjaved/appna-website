@@ -36,9 +36,14 @@ $(function() {
         else {
             obj.scrollIntoView(center);
         }
+    });  
+
+    $('#email').click(function() { 
+        let textarea = document.createElement('textarea');
+        textarea.textContent = $(this).text();
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
     });
-
-
 });
-
-

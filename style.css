@@ -72,6 +72,10 @@ body {
     color: white !important;
 }
 
+#email {
+    color: #006600;
+}
+
 /* Facebook Plugin */
 .fb-page {
     text-align: center;
