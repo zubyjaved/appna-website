@@ -1,7 +1,6 @@
 
 $(function() {
     /*
-    Kinda spaghetti..
     If the user clicks on nav link that opens a card, scrolls the card into view.
 
     1. Remove "nav" from clicked nav-link id.      Example: contactNav -> contact
@@ -22,13 +21,11 @@ $(function() {
             block: "end",
             inline: "end",
         }
-
         let center = {
             behavior: "smooth",
             block: "center",
             inline: "center",
         }
-
         if ($(window).width() < 768) {
             obj.scrollIntoView(end)
         }
@@ -37,7 +34,7 @@ $(function() {
         }
     });  
 
-    /* If email in card-body is clicked, copy to clipboard */
+    /* If email clicked, copy to clipboard. */
     $('#email').click(function() { 
         let textarea = document.createElement('textarea');
         textarea.textContent = $(this).text();
@@ -46,13 +43,17 @@ $(function() {
         document.execCommand('copy');
         textarea.remove();
 
+
+        /* 
+        Change contact info to "copied" for 2 seconds.
+        */
         $('#contactInfo').hide();
         let $contact = $("<p>Copied!</p>");
         $ ('#contactInfo').after($contact);
         setTimeout(function() {
             $contact.hide();
             $('#contactInfo').show();
-        }, 3000);
+        }, 2000);
 
     });
 });
