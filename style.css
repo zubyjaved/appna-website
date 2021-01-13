@@ -36,6 +36,12 @@ body {
     font-size: 1rem;
 }
 
+.carousel-item img {
+    margin:auto;
+    width:100%;
+}
+
+
 /* Cards */
 .card {
     margin: 1rem;
@@ -99,7 +105,10 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+.carousel-item img {
+    width:auto;
+    height:40em;
+}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
