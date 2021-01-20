@@ -1,4 +1,2 @@
-# appnaca.org
-Main website for APPNA's Northern California Chapter.
-
-Created using Bootstrap 4. 
+# get-office-lines
+Given text, returns the closest matching line from "The Office."
